@@ -68,20 +68,21 @@ body {
   animation: slideDown 0.4s ease-out;
 }
 
-/* Efeito de brilho nos botões */
+/* Efeito de hover nos botões */
 button {
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
 }
 
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 button:active {
   transform: translateY(0);
+  transition: all 0.1s ease;
 }
 
 button::before {
@@ -106,11 +107,14 @@ button:hover::before {
 
 /* Efeito nas imagens */
 img {
-  transition: all 0.3s ease;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 img:hover {
   filter: brightness(1.1);
+  transition: filter 0.3s ease;
 }
 
 /* Scrollbar personalizada */
@@ -297,10 +301,7 @@ img:hover {
   animation: blink 1s infinite;
 }
 
-/* Transições suaves para todos os elementos */
-* {
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
+/* Transições suaves removidas do seletor universal para evitar bugs */
 
 /* Efeito de foco acessível */
 button:focus-visible,
