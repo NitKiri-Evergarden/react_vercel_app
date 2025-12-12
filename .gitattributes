@@ -1,2 +1,6 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Força todos os arquivos de texto a usar LF no repositório
+* text=auto eol=lf
+
+# Arquivos específicos que devem manter CRLF (se necessário)
+*.bat text eol=crlf
+*.cmd text eol=crlf
